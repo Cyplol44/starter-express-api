@@ -19,7 +19,7 @@ form.addEventListener('submit', (event) => {
     formData.append('torrent', file);
 
     // Send a POST request to the server with the file data
-    fetch('https://test-t2m.vercel.app/upload/', {
+    fetch('/upload', {
         method: 'POST',
         body: formData,
     })
