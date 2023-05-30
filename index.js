@@ -13,7 +13,7 @@ const upload = multer({
 });
 
 // Set up a route to handle file uploads
-app.post('https://test-t2m.vercel.app/upload/', upload.single('torrent'), (req, res) => {
+app.post('upload/', upload.single('torrent'), (req, res) => {
     // Use parseTorrent to parse the uploaded file data
     const parsedTorrent = parseTorrent(req.file.buffer);
     // Use parseTorrent.toMagnetURI() to convert the parsed data to a magnet URI
